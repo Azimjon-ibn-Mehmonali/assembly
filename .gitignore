@@ -1,0 +1,12 @@
+*.ddp
+*.obj
+*.~cpp
+*.~ddp
+*.~dfm
+*.~h
+*.~bpr
+*.bpr
+*.drc
+*.exe
+*.res
+*.tds
