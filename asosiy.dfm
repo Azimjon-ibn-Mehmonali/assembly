@@ -212,7 +212,7 @@ object Form1: TForm1
       Width = 201
       Height = 225
       HelpType = htKeyword
-      KeyOptions = [keyEdit, keyAdd, keyDelete, keyUnique]
+      KeyOptions = [keyUnique]
       Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goEditing, goTabs, goAlwaysShowEditor, goThumbTracking]
       Strings.Strings = (
         '=')
