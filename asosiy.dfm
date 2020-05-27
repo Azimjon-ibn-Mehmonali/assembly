@@ -1,9 +1,8 @@
 object Form1: TForm1
-  Left = 183
-  Top = 109
-  Width = 1023
-  Height = 590
-  VertScrollBar.Position = 67
+  Left = 187
+  Top = 116
+  Width = 1103
+  Height = 627
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Asosiy'
   Color = clBtnFace
@@ -20,7 +19,7 @@ object Form1: TForm1
   TextHeight = 13
   object label_code: TLabel
     Left = 16
-    Top = -51
+    Top = 16
     Width = 134
     Height = 25
     Caption = 'Assembly code'
@@ -32,8 +31,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object label_input: TLabel
-    Left = 696
-    Top = 21
+    Left = 648
+    Top = 37
     Width = 43
     Height = 25
     Caption = 'Input'
@@ -45,8 +44,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object label_output: TLabel
-    Left = 720
-    Top = 317
+    Left = 656
+    Top = 365
     Width = 59
     Height = 25
     Caption = 'Output'
@@ -59,14 +58,14 @@ object Form1: TForm1
   end
   object code: TRichEdit
     Left = 16
-    Top = -19
+    Top = 48
     Width = 617
     Height = 505
     TabOrder = 0
   end
   object yuklash: TButton
     Left = 48
-    Top = 509
+    Top = 568
     Width = 75
     Height = 25
     Caption = 'Yuklash'
@@ -74,15 +73,15 @@ object Form1: TForm1
     OnClick = yuklashClick
   end
   object chiqish: TMemo
-    Left = 720
-    Top = 349
+    Left = 656
+    Top = 397
     Width = 185
     Height = 89
     TabOrder = 2
   end
   object cpu: TGroupBox
-    Left = 992
-    Top = 93
+    Left = 656
+    Top = 96
     Width = 321
     Height = 257
     Caption = 'CPU'
@@ -159,7 +158,7 @@ object Form1: TForm1
   end
   object step_forward: TButton
     Left = 216
-    Top = 509
+    Top = 568
     Width = 75
     Height = 25
     Caption = '==>'
@@ -168,7 +167,7 @@ object Form1: TForm1
   end
   object step_back: TButton
     Left = 136
-    Top = 509
+    Top = 568
     Width = 75
     Height = 25
     Caption = '<=='
@@ -176,7 +175,7 @@ object Form1: TForm1
   end
   object qayta: TButton
     Left = 440
-    Top = 496
+    Top = 563
     Width = 75
     Height = 25
     Caption = 'Qayta'
@@ -184,20 +183,64 @@ object Form1: TForm1
     OnClick = qaytaClick
   end
   object kirish: TEdit
-    Left = 696
-    Top = 56
+    Left = 656
+    Top = 69
     Width = 121
     Height = 21
     TabOrder = 7
     OnKeyPress = kirishKeyPress
   end
   object Button1: TButton
-    Left = 592
-    Top = 504
+    Left = 528
+    Top = 563
     Width = 75
     Height = 25
     Caption = 'Ishla'
     TabOrder = 8
     OnClick = Button1Click
+  end
+  object xotira: TGroupBox
+    Left = 280
+    Top = 48
+    Width = 353
+    Height = 297
+    Caption = 'Xoira bilan ishlash'
+    TabOrder = 9
+    object tezxot: TValueListEditor
+      Left = 8
+      Top = 16
+      Width = 201
+      Height = 225
+      HelpType = htKeyword
+      KeyOptions = [keyEdit, keyAdd, keyDelete, keyUnique]
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goEditing, goTabs, goAlwaysShowEditor, goThumbTracking]
+      Strings.Strings = (
+        '=')
+      TabOrder = 0
+      TitleCaptions.Strings = (
+        'Xotira manzili'
+        'Qiymati'
+        '')
+      OnSetEditText = ge
+      ColWidths = (
+        83
+        112)
+    end
+    object xoita_qosh: TButton
+      Left = 232
+      Top = 80
+      Width = 75
+      Height = 25
+      Caption = 'Qo'#39'shish'
+      TabOrder = 1
+      OnClick = xoita_qoshClick
+    end
+    object ymanzil: TEdit
+      Left = 216
+      Top = 40
+      Width = 121
+      Height = 21
+      TabOrder = 2
+    end
   end
 end

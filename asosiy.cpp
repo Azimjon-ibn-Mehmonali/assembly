@@ -257,3 +257,35 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+
+void __fastcall TForm1::xoita_qoshClick(TObject *Sender)
+{
+// xotira_manzil_tekshir(ymanzil->Text);
+
+tezxot->InsertRow(ymanzil->Text, IntToStr(txq[StrToInt(ymanzil->Text)]), true);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::ge(TObject *Sender, int ACol,
+      int ARow, const AnsiString Value)
+{
+    //
+    //ShowMessage(IntToStr(ACol));
+//    Value = AnsiString("0") + Value;
+    AnsiString k("0");
+    k += Value;
+    if (ACol == 1) {
+        //ShowMessage(Value);
+//        ShowMessage(tezxot->Keys[ARow]);
+        ShowMessage(k);
+        txq[StrToInt(tezxot->Keys[ARow])] = StrToInt(k);
+    }
+}
+//---------------------------------------------------------------------------
+
+
+
+
+
+
+

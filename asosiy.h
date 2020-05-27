@@ -8,6 +8,8 @@
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 #include <ComCtrls.hpp>
+#include <Grids.hpp>
+#include <ValEdit.hpp>
 #include <vector>
 #include <map>
 #include <string>
@@ -36,11 +38,18 @@ __published:	// IDE-managed Components
     TButton *qayta;
     TEdit *kirish;
     TButton *Button1;
+    TValueListEditor *tezxot;
+    TGroupBox *xotira;
+    TButton *xoita_qosh;
+    TEdit *ymanzil;
         void __fastcall yuklashClick(TObject *Sender);
     void __fastcall step_forwardClick(TObject *Sender);
     void __fastcall qaytaClick(TObject *Sender);
     void __fastcall kirishKeyPress(TObject *Sender, char &Key);
     void __fastcall Button1Click(TObject *Sender);
+    void __fastcall xoita_qoshClick(TObject *Sender);
+    void __fastcall ge(TObject *Sender, int ACol, int ARow,
+          const AnsiString Value);
 private:	// User declarations
 public:		// User declarations
         TStrings * matn;
