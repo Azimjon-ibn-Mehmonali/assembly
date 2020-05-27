@@ -114,11 +114,23 @@ void __fastcall TForm1::step_forwardClick(TObject *Sender)
         }
     }
     else if (buyruq == "sto") {
+        int man, sr, sa;
          if (isdigit(js[0])) {
-            txq[StrToInt(js.c_str())] = StrToInt(acc->Text);
+            man = StrToInt(js.c_str());
+            txq[man] = StrToInt(acc->Text);
          }
          else {
-            txq[nishonlar[js]] = StrToInt(acc->Text);
+            man = nishonlar[js];
+            txq[man] = StrToInt(acc->Text);
+         }
+         sa = tezxot->FindRow(IntToStr(man), sr);
+//         ShowMessage(IntToStr(sr));
+         if (sa) {
+            //ShowMessage("Topildi!");
+//            ShowMessage(IntToStr(sr));
+            tezxot->Values[man] = acc->Text;
+         } else {
+            tezxot->InsertRow(IntToStr(man), acc->Text, true);
          }
     }
     else if (buyruq == "mov") {
@@ -277,7 +289,7 @@ void __fastcall TForm1::ge(TObject *Sender, int ACol,
     if (ACol == 1) {
         //ShowMessage(Value);
 //        ShowMessage(tezxot->Keys[ARow]);
-        ShowMessage(k);
+//        ShowMessage(k);
         txq[StrToInt(tezxot->Keys[ARow])] = StrToInt(k);
     }
 }
