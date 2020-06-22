@@ -6,6 +6,11 @@
 #include "asosiy.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
+#pragma link "sSkinManager"
+#pragma link "sSkinProvider"
+#pragma link "sCheckBox"
+#pragma link "sButton"
+#pragma link "sLabel"
 #pragma resource "*.dfm"
 
 TForm1 *Form1;
@@ -42,7 +47,7 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 //---------------------------------------------------------------------------
 
 
-void __fastcall TForm1::yuklashClick(TObject *Sender)
+void __fastcall TForm1::yuklash1Click(TObject *Sender)
 {
     teng = -1;
     matn = code->Lines;
@@ -74,7 +79,7 @@ void __fastcall TForm1::yuklashClick(TObject *Sender)
       //  output->Lines->Add(dastur[i].c_str());
 }
 //---------------------------------------------------------------------------
-void __fastcall TForm1::step_forwardClick(TObject *Sender)
+void __fastcall TForm1::step_forward1Click(TObject *Sender)
 {
     string js, buyruq;
     js = string(dastur[pc->Text.ToInt()]);
@@ -239,7 +244,7 @@ void __fastcall TForm1::step_forwardClick(TObject *Sender)
 
 
 
-void __fastcall TForm1::qaytaClick(TObject *Sender)
+void __fastcall TForm1::qayta1Click(TObject *Sender)
 {
     acc->Text = "0";
     pc->Text = "00";
@@ -262,7 +267,7 @@ void __fastcall TForm1::kirishKeyPress(TObject *Sender, char &Key)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm1::Button1Click(TObject *Sender)
+void __fastcall TForm1::ishla1Click(TObject *Sender)
 {
     while (step_forward->Enabled)
         step_forward->Click();
@@ -270,34 +275,57 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 //---------------------------------------------------------------------------
 
 
-void __fastcall TForm1::xoita_qoshClick(TObject *Sender)
+void __fastcall TForm1::xoita_qosh1Click(TObject *Sender)
 {
 // xotira_manzil_tekshir(ymanzil->Text);
-
-tezxot->InsertRow(ymanzil->Text, IntToStr(txq[StrToInt(ymanzil->Text)]), true);
+try {
+    tezxot->InsertRow(ymanzil->Text, IntToStr(txq[StrToInt(ymanzil->Text)]), true);
+}
+catch (Exception & e) {
+    ShowMessage("Xatolik sodir bo'ldi!\n" + e.Message);
+}
+catch (...) {
+    ShowMessage("Xatolik sodir bo'ldi!");
+}
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::ge(TObject *Sender, int ACol,
       int ARow, const AnsiString Value)
 {
-    //
-    //ShowMessage(IntToStr(ACol));
-//    Value = AnsiString("0") + Value;
+try {
     AnsiString k("0");
     k += Value;
     if (ACol == 1) {
-        //ShowMessage(Value);
-//        ShowMessage(tezxot->Keys[ARow]);
-//        ShowMessage(k);
         txq[StrToInt(tezxot->Keys[ARow])] = StrToInt(k);
     }
 }
+catch (Exception & e) {
+    ShowMessage("Xatolik sodir bo'ldi!\n" + e.Message);
+}
+catch (...) {
+    ShowMessage("Xatolik sodir bo'ldi!");
+}
+}
 //---------------------------------------------------------------------------
 
+AnsiString ExePath() {
+    char buffer[MAX_PATH];
+    GetModuleFileName( NULL, buffer, MAX_PATH );
+    int pos = string( buffer ).find_last_of( "\\/" );
+    string  s = string( buffer ).substr( 0, pos);
+
+    return AnsiString(s.c_str());
+}
 
 
-
+void __fastcall TForm1::FormCreate(TObject *Sender)
+{
+    sSkinManager1->SkinDirectory = ExePath();
+    sSkinManager1->SkinName = "Afterburner";
+    sSkinManager1->Active = true;
+}
+//---------------------------------------------------------------------------
 
 
 
