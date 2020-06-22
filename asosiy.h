@@ -10,6 +10,11 @@
 #include <ComCtrls.hpp>
 #include <Grids.hpp>
 #include <ValEdit.hpp>
+#include "sSkinManager.hpp"
+#include "sSkinProvider.hpp"
+#include "sCheckBox.hpp"
+#include "sButton.hpp"
+#include "sLabel.hpp"
 #include <vector>
 #include <map>
 #include <string>
@@ -21,35 +26,37 @@ class TForm1 : public TForm
 {
 __published:	// IDE-managed Components
         TRichEdit *code;
-        TLabel *label_code;
-    TButton *yuklash;
     TMemo *chiqish;
-        TLabel *label_input;
-        TLabel *label_output;
         TGroupBox *cpu;
         TEdit *pc;
-        TLabel *label_pc;
         TEdit *acc;
-        TLabel *label_acc;
-        TLabel *label_ix;
         TEdit *ix;
-        TButton *step_forward;
-        TButton *step_back;
-    TButton *qayta;
     TEdit *kirish;
-    TButton *Button1;
     TValueListEditor *tezxot;
     TGroupBox *xotira;
-    TButton *xoita_qosh;
     TEdit *ymanzil;
-        void __fastcall yuklashClick(TObject *Sender);
-    void __fastcall step_forwardClick(TObject *Sender);
-    void __fastcall qaytaClick(TObject *Sender);
+    TsSkinManager *sSkinManager1;
+    TsSkinProvider *sSkinProvider1;
+    TsButton *xotira_qosh;
+    TsButton *yuklash;
+    TsButton *step_forward;
+    TsButton *qayta;
+    TsButton *ishla;
+    TsLabel *sLabel1;
+    TsLabel *sLabel2;
+    TsLabel *sLabel3;
+    TsLabel *sLabel4;
+    TsLabel *sLabel5;
+    TsLabel *sLabel6;
+        void __fastcall yuklash1Click(TObject *Sender);
+    void __fastcall step_forward1Click(TObject *Sender);
+    void __fastcall qayta1Click(TObject *Sender);
     void __fastcall kirishKeyPress(TObject *Sender, char &Key);
-    void __fastcall Button1Click(TObject *Sender);
-    void __fastcall xoita_qoshClick(TObject *Sender);
+    void __fastcall ishla1Click(TObject *Sender);
+    void __fastcall xoita_qosh1Click(TObject *Sender);
     void __fastcall ge(TObject *Sender, int ACol, int ARow,
           const AnsiString Value);
+    void __fastcall FormCreate(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         TStrings * matn;
