@@ -326,6 +326,9 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
     sSkinManager1->Active = true;
 }
 //---------------------------------------------------------------------------
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> da36b7553c134580983eb2d2a4670e40786f448f
 

@@ -48,7 +48,10 @@ __published:	// IDE-managed Components
     TsLabel *sLabel4;
     TsLabel *sLabel5;
     TsLabel *sLabel6;
+<<<<<<< HEAD
     TsLabelFX *sLabelFX1;
+=======
+>>>>>>> da36b7553c134580983eb2d2a4670e40786f448f
         void __fastcall yuklash1Click(TObject *Sender);
     void __fastcall step_forward1Click(TObject *Sender);
     void __fastcall qayta1Click(TObject *Sender);

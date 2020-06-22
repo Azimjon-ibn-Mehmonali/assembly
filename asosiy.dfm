@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 250
-  Top = 84
+  Left = 234
+  Top = 80
   Width = 1019
   Height = 645
   BorderIcons = [biSystemMenu, biMinimize]
@@ -62,6 +62,7 @@ object Form1: TForm1
     Font.Height = -20
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+<<<<<<< HEAD
   end
   object sLabelFX1: TsLabelFX
     Left = 1224
@@ -69,6 +70,8 @@ object Form1: TForm1
     Width = 133
     Height = 21
     Caption = #169' Azimjon Mehmonali o'#39'g'#39'li'
+=======
+>>>>>>> da36b7553c134580983eb2d2a4670e40786f448f
   end
   object code: TRichEdit
     Left = 16
@@ -200,7 +203,11 @@ object Form1: TForm1
     Height = 505
     Caption = 'Xoira bilan ishlash'
     Font.Charset = DEFAULT_CHARSET
+<<<<<<< HEAD
     Font.Color = clWindow
+=======
+    Font.Color = clWhite
+>>>>>>> da36b7553c134580983eb2d2a4670e40786f448f
     Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
@@ -208,7 +215,11 @@ object Form1: TForm1
     TabOrder = 4
     object tezxot: TValueListEditor
       Left = 8
+<<<<<<< HEAD
       Top = 24
+=======
+      Top = 16
+>>>>>>> da36b7553c134580983eb2d2a4670e40786f448f
       Width = 209
       Height = 377
       HelpType = htKeyword
@@ -233,8 +244,13 @@ object Form1: TForm1
         120)
     end
     object ymanzil: TEdit
+<<<<<<< HEAD
       Left = 56
       Top = 416
+=======
+      Left = 48
+      Top = 408
+>>>>>>> da36b7553c134580983eb2d2a4670e40786f448f
       Width = 121
       Height = 28
       Font.Charset = DEFAULT_CHARSET
@@ -244,6 +260,19 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
       TabOrder = 1
+<<<<<<< HEAD
+=======
+    end
+    object xotira_qosh: TsButton
+      Left = 72
+      Top = 440
+      Width = 75
+      Height = 25
+      Caption = 'Qo'#39'shish'
+      TabOrder = 2
+      OnClick = xoita_qosh1Click
+      SkinData.SkinSection = 'BUTTON'
+>>>>>>> da36b7553c134580983eb2d2a4670e40786f448f
     end
   end
   object yuklash: TsButton
@@ -286,6 +315,7 @@ object Form1: TForm1
     OnClick = ishla1Click
     SkinData.SkinSection = 'BUTTON'
   end
+<<<<<<< HEAD
   object xotira_qosh: TsButton
     Left = 856
     Top = 500
@@ -304,6 +334,8 @@ object Form1: TForm1
     OnClick = xoita_qosh1Click
     SkinData.SkinSection = 'BUTTON'
   end
+=======
+>>>>>>> da36b7553c134580983eb2d2a4670e40786f448f
   object sSkinManager1: TsSkinManager
     Active = False
     InternalSkins = <>
@@ -335,8 +367,13 @@ object Form1: TForm1
     ThirdParty.ThirdScrollControl = ' '
     ThirdParty.ThirdUpDown = ' '
     ThirdParty.ThirdScrollBar = ' '
+<<<<<<< HEAD
     Left = 1080
     Top = 564
+=======
+    Left = 1136
+    Top = 608
+>>>>>>> da36b7553c134580983eb2d2a4670e40786f448f
   end
   object sSkinProvider1: TsSkinProvider
     AddedTitle.Font.Charset = DEFAULT_CHARSET
@@ -348,7 +385,12 @@ object Form1: TForm1
     MakeSkinMenu = True
     TitleButtons = <>
     TitleSkin = 'BARPANEL'
+<<<<<<< HEAD
     Left = 1112
     Top = 564
+=======
+    Left = 1192
+    Top = 664
+>>>>>>> da36b7553c134580983eb2d2a4670e40786f448f
   end
 end
